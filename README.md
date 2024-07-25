@@ -292,8 +292,16 @@ jobs:
 
 
 ## Snapshot of Successful Run of GitHub Actions
+
+### Access the web-app through the EC2's Public IPv4 Address along with the port mentioned in app.py file (ex. IPv4:Port number) 
+
+CONTINUOS INTEGRATION
 ![1](https://github.com/user-attachments/assets/e979cac7-5bad-4079-b7f2-023cc1613d99)
+
+CONTINUOS DELIVERY
 ![2](https://github.com/user-attachments/assets/7a5cd7fd-4fe2-4a48-ac3e-436e17aa6a37)
+
+CONTINUOS DEPLOYMENT
 ![3](https://github.com/user-attachments/assets/e10cdc15-4418-4821-a733-067e7252ce59)
 
 ## Finally Steps For Not Incurring Charges

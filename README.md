@@ -288,4 +288,14 @@ jobs:
 
 - click on New repository secret -> name it as "AWS_ECR_LOGIN_URI", where the url saved previously Value="211125765812.dkr.ecr.us-east-2.amazonaws.com" (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")
 
-- click on New repository secret -> name it as "ECR_REPO_NAME" = "studentperformance" and give the same name found at the end of the previously saved URL (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")	
+- click on New repository secret -> name it as "ECR_REPOSITORY_NAME" = "studentperformance" and give the same name found at the end of the previously saved URL (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")
+
+
+## Finally Steps For Not Incurring Charges
+
+- On GitHub
+	- Delete your runner
+- On AWS 	
+	- Delete your EC2 instance
+	- Delete ECR repo
+	- Delete VPC's

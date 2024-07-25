@@ -1,3 +1,7 @@
+==============================================================================================
+								On VS-Code/IDE and GitHub
+==============================================================================================
+
 Open Anaconda CMD Prompt
 
 Change path to project folder path
@@ -55,7 +59,9 @@ git status
 git commit -m "desired commit name"
 git push -u origin main
 
-============================== DOCKER ================================
+==============================================================================================
+											DOCKER
+==============================================================================================
 
 - Containers are combination of layers of images w.r.t dependencies, where each layer of image can be python, mongodb, mysql, anaconda, Linux etc,.
 
@@ -127,37 +133,63 @@ git push -u origin main
 				redis:
 					image:redis  #name of image
 
-======================================= AWS Deployment =======================================
 
-- AWS Elastic Container Registry (ECR): It is a container registry used to store private docker images. 
+==============================================================================================
+		Create GitHub Actions workflow configuration that defines a CI/CD pipeline  
+==============================================================================================
+
+
+- The workflow is triggered by pushes to the main branch.
+
+- The integration job runs linting and unit tests.
+
+- The build-and-push-ecr-image job builds and pushes a Docker image to ECR.
+
+- The Continuous-Deployment job pulls the Docker image from ECR and runs it, serving users on a self-hosted runner, and cleans up old images and containers.
+
+
+==============================================================================================
+										AWS Deployment 
+==============================================================================================
+
+- AWS Elastic Container Registry (ECR): It is a fully-managed docker container used to store, manage and deploy private docker images. 
 
 - Create an IAM user and attach two policies "AmazonEC2ContainerRegistryFullAccess" and "AmazonEC2FullAccess"
 
-- Under IAM user create the Access key for Command Line Interface (CLI) and download the csv file
+- Under IAM select the user created above followed by the creation of Access key for Command Line Interface (CLI) and download the csv file
 
 - Search for ECR service, Create a new repo keeping it private, give the name for URL, copy the URL and save it
 
-- Search EC2 Instance service, launch instance, give the name for instance, select ubuntu, and select the tier as per the requirement (DELETE IT WHEN DONE - Charges might incured) launch the instance
+- Search EC2 Instance service, launch instance, give the name for instance, select ubuntu, and select the tier as per the requirement, allow http and https traffic now launch the instance (DELETE IT WHEN DONE Charges might incured)
+
+- For the above created intance goto Security -> Select the security group -> Click on edit inbound rules -> Add rule as "Custom TCP" and Port range = the port mentioned in "app.py" file
 
 - Select the instance id for the above created instance and click on connect 
 
-- Steps in Command Prompt:
+- Execute following steps in Command Prompt on AWS:
     - sudo apt-get update -y
     - sudo apt-get upgrade -y
     - curl -fsSL https://get.docker.com -o get-docker.sh
     - sudo sh get-docker.sh
     - sudo usermod -aG docker ubuntu
     - newgrp docker
-
-- In github 
-	- Go to settings -> Actions -> Runners -> create self-hosted runner -> execute all Download, Configure steps on EC2 instance in AWS -> Give the name for runner as "self-hosted"
-
-	- Go to settings -> Security -> click on New repository secret -> name it as "AWS_ACCESS_KEY_ID" -> refer the earlier downloaded CSV file from AWS for KEY_ID 
+	- docker (to check whether docker is running)
 	
-	- click on New repository secret -> name it as "AWS_SECRET_ACCESS_KEY" -> refer the earlier downloaded CSV file from AWS for SECRET_KEY
 
-	- click on New repository secret -> name it as "AWS_REGION" and give the current region from AWS (ex. us-east-1) 
+==============================================================================================
+										On GITHUB
+==============================================================================================
 
-	- click on New repository secret -> name it as "AWS_ECR_LOGIN_URI" and give the url saved previously
+- Go to settings -> Actions -> Runners -> create self-hosted runner -> Linux -> execute all cmd's under Download and Configure on EC2 instance in AWS -> Give the name for runner as "self-hosted" -> Enter "./run.sh" to run the runner
 
-	- click on New repository secret -> name it as "ECR_REPO_NAME" and give the same name found in the end of previously saved URL
+- Check the status of runner by, Going to settings -> Actions -> Runners -> Under status there should be green dot saying idle
+
+- Go to settings -> Security -> Secrets and variable -> Actions -> click on New repository secret -> name it as "AWS_ACCESS_KEY_ID" -> refer the earlier downloaded CSV file from AWS for KEY_ID 
+	
+- click on New repository secret -> name it as "AWS_SECRET_ACCESS_KEY" -> refer the earlier downloaded CSV file from AWS for SECRET_KEY
+
+- click on New repository secret -> name it as "AWS_REGION" and give the current region from AWS (ex. us-east-1) 
+
+- click on New repository secret -> name it as "AWS_ECR_LOGIN_URI", where the url saved previously Value="211125765812.dkr.ecr.us-east-2.amazonaws.com" (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")
+
+- click on New repository secret -> name it as "ECR_REPO_NAME" = "studentperformance" and give the same name found in the end of previously saved URL (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")	

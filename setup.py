@@ -19,7 +19,7 @@ def get_requirements(file_path:str) -> List[str]:
     return requirements
 
 setup(
-name = 'ML_Project',
+name = 'AWS_CICD_Pipeline_Project',
 version = '0.0.1',
 author = 'Aniket Walse',
 author_email = 'aniket.walse20@gmail.com',

@@ -3,8 +3,6 @@ import sys
 from src.exception import CustomException
 from src.logger import logging
 from src.components.data_transformation import DataTransformation
-from src.components.data_transformation import DataTransformationConfig
-from src.components.model_trainer import ModelTrainingConfig
 from src.components.model_trainer import ModelTraining
 
 import pandas as pd

@@ -46,17 +46,17 @@
 - Go through once documentation of logger and exception handling
 
 ## GitHub CMD'S Summary:
-	- git init
-	- git add README.md
-	- git commit -m "first commit"
-	- git branch -M main
-	- git remote add origin https://github.com/aniket199719/ML-Project.git
-	- git remote -v
-	- git push -u origin main
-	- git add .
-	- git status
-	- git commit -m "desired commit name"
-	- git push -u origin main
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git branch -M main
+	git remote add origin https://github.com/aniket199719/ML-Project.git
+	git remote -v
+	git push -u origin main
+	git add .
+	git status
+	git commit -m "desired commit name"
+	git push -u origin main
 
 
 ## DOCKER 
@@ -76,7 +76,7 @@
 - When "host = 0.0.0.0" means we can access docker_image using localhost ip_address or using local ip_address.
 
 - Format of docker file (should be created in VS code-named "Dockerfile"):
-
+	```
 	FROM python:3.8-alpine
 	COPY . .
 	WORKDIR /app
@@ -85,7 +85,7 @@
 	RUN pip install -r requirements.txt
 	EXPOSE 5000
 	CMD ["flask", "run"]
-
+	```
 - Docker CMD's to create, view, push, pull, remove, rename, and run the docker_image:
 
 	- For Login: "docker login" (type username press enter and then type password)
@@ -109,8 +109,8 @@
 - Docker Compose: This is a tool for defining and running multi-container docker applications, in order to make this run and interact with each other we will need two files i.e., "docker-compose.yml" and "dockerfile". 
  
  	- Format for "dockerfile":
-		'''
- 		FROM python:3.8-alpine
+		```
+    		FROM python:3.8-alpine
 		COPY . .
 		WORKDIR /app
 		ENV FLASK_APP = appy.py
@@ -118,9 +118,10 @@
 		RUN pip install -r requirements.txt
 		EXPOSE 5000
 		CMD ["flask", "run"]
-		'''
-	- Format for "docker-compose.yml" containing 2 images (follow the indentation):
+  		```
 
+	- Format for "docker-compose.yml" containing 2 images (follow the indentation):
+		```
 		version: "3.0"
 		services:
 			web:
@@ -130,7 +131,7 @@
 					- "5000:5000"
 				redis:
 					image:redis  #name of image
-
+		```
 
 
 ## Create GitHub Actions workflow configuration that defines a CI/CD pipeline  
@@ -162,13 +163,15 @@
 - Select the instance ID for the above-created instance and click on connect 
 
 - Execute the following steps in Command Prompt on AWS:
-    - sudo apt-get update -y
-    - sudo apt-get upgrade -y
-    - curl -fsSL https://get.docker.com -o get-docker.sh
-    - sudo sh get-docker.sh
-    - sudo usermod -aG docker ubuntu
-    - newgrp docker
-	- docker (to check whether docker is running)
+```
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    sudo usermod -aG docker ubuntu
+    newgrp docker
+    docker (to check whether docker is running)
+```
 	
 
 ## On GitHub

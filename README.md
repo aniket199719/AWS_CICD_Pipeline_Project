@@ -252,7 +252,7 @@ jobs:
 
 - Create an IAM user and attach two policies "AmazonEC2ContainerRegistryFullAccess" and "AmazonEC2FullAccess"
 
-- Under IAM select the user created above followed by the creation of the Access key for Command Line Interface (CLI) and download the csv file
+- Under IAM select the user created above followed by the creation of the Access key under Security credentials for Command Line Interface (CLI) and download the csv file
 
 - Search for ECR service, Create a new repo keeping it private, give the name for the URL, copy the URL, and save it
 

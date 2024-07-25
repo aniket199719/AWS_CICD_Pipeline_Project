@@ -45,19 +45,18 @@
 
 - Go through once documentation of logger and exception handling
 
-CMD'S Summary:
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/aniket199719/ML-Project.git
-git remote -v
-git push -u origin main
-
-git add .
-git status
-git commit -m "desired commit name"
-git push -u origin main
+## GitHub CMD'S Summary:
+	- git init
+	- git add README.md
+	- git commit -m "first commit"
+	- git branch -M main
+	- git remote add origin https://github.com/aniket199719/ML-Project.git
+	- git remote -v
+	- git push -u origin main
+	- git add .
+	- git status
+	- git commit -m "desired commit name"
+	- git push -u origin main
 
 
 ## DOCKER 

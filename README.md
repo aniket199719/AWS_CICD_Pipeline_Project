@@ -1,7 +1,7 @@
 ## Steps for AWS CICD Pipeline Project 
 
 
-						### On VS-Code/IDE and GitHub
+						On VS-Code/IDE and GitHub
 
 Open Anaconda CMD Prompt
 
@@ -60,9 +60,10 @@ git status
 git commit -m "desired commit name"
 git push -u origin main
 
-==============================================================================================
-											DOCKER
-==============================================================================================
+  ==========================================================================================================================
+		 						DOCKER 
+  ==========================================================================================================================
+
 
 - Containers are combination of layers of images w.r.t dependencies, where each layer of image can be python, mongodb, mysql, anaconda, Linux etc,.
 

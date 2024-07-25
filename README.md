@@ -2,48 +2,48 @@
 
 ## On VS-Code/IDE and GitHub
 
-Open Anaconda CMD Prompt
+- Open Anaconda CMD Prompt
 
-Change path to project folder path
+- Change path to project folder path
     Ex=> cd H:\Projects\ML_Project -> H:
 
-Enter "code ." to Open the VS code editor in the specified path
+- Enter "code ." to Open the VS code editor in the specified path
 
-Create a virtual environment using cmd "conda create -p venv python==3.8 -y" 
+- Create a virtual environment using cmd "conda create -p venv python==3.8 -y" 
 
-Activate the environment using "conda activate venv/" notice the (base) goes off
+- Activate the environment using "conda activate venv/" notice the (base) goes off
 
-Intialize git repo "git init"
+- Intialize git repo "git init"
 
-Create "README.md" file
+- Create "README.md" file
     Add README file to git repo "git add README.md"
 
-Commit changes "git commit -m "first commit"
+- Commit changes "git commit -m "first commit"
 
-Use "git status" to check the list the files from the repo
+- Use "git status" to check the list the files from the repo
 
-Do branching using "git branch -M main" 
+- Do branching using "git branch -M main" 
 
-Add the origin "git remote add origin https://github.com/aniket199719/AWS_CI-CD_Project.git"
+- Add the origin "git remote add origin https://github.com/aniket199719/AWS_CI-CD_Project.git"
 
-Check the sync using "git remote -v"
+- Check the sync using "git remote -v"
 
-To push data into the git repo "git push -u origin main" 
+- To push data into the git repo "git push -u origin main" 
     NOTE: If doing a push for the first time you will have to set "git global" using the below cmds
         $ git config --global user.name "John Doe"
         $ git config --global user.email johndoe@example.com
 
-Create ".gitignore" file by choosing Python for the same file
+- Create ".gitignore" file by choosing Python for the same file
 
-"__init__.py" is a file which can be used as a package and can be imported
+- "__init__.py" is a file which can be used as a package and can be imported
 
-Create "setup.py" file i.e., is responsible in creating the ML application as a package and deploying it
+- Create "setup.py" file i.e., is responsible in creating the ML application as a package and deploying it
 
-Components are the modules which we are going to use in creating the project
+- Components are the modules which we are going to use in creating the project
 
-In "exception.py" import sys package (The sys module in Python provides various functions and variables that are used to manipulate different parts of the Python runtime environment. It allows operating on the interpreter as it provides access to the variables and functions that interact strongly with the interpreter.)
+- In "exception.py" import sys package (The sys module in Python provides various functions and variables that are used to manipulate different parts of the Python runtime environment. It allows operating on the interpreter as it provides access to the variables and functions that interact strongly with the interpreter.)
 
-Go through once documentation of logger and exception handling
+- Go through once documentation of logger and exception handling
 
 CMD'S Summary:
 git init

@@ -110,7 +110,7 @@
  
  	- Format for "dockerfile":
 		```
-    		FROM python:3.8-alpine
+  		FROM python:3.8-alpine
 		COPY . .
 		WORKDIR /app
 		ENV FLASK_APP = appy.py

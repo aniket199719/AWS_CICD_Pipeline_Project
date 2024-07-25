@@ -291,6 +291,11 @@ jobs:
 - click on New repository secret -> name it as "ECR_REPOSITORY_NAME" = "studentperformance" and give the same name found at the end of the previously saved URL (ex: "211125765812.dkr.ecr.us-east-2.amazonaws.com/studentperformance")
 
 
+## Snapshot of Successful Run of GitHub Actions
+![1](https://github.com/user-attachments/assets/e979cac7-5bad-4079-b7f2-023cc1613d99)
+![2](https://github.com/user-attachments/assets/7a5cd7fd-4fe2-4a48-ac3e-436e17aa6a37)
+![3](https://github.com/user-attachments/assets/e10cdc15-4418-4821-a733-067e7252ce59)
+
 ## Finally Steps For Not Incurring Charges
 
 - On GitHub

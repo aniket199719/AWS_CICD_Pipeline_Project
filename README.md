@@ -109,7 +109,7 @@
 - Docker Compose: This is a tool for defining and running multi-container docker applications, in order to make this run and interact with each other we will need two files i.e., "docker-compose.yml" and "dockerfile". 
  
  	- Format for "dockerfile":
-
+		'''
  		FROM python:3.8-alpine
 		COPY . .
 		WORKDIR /app
@@ -118,7 +118,7 @@
 		RUN pip install -r requirements.txt
 		EXPOSE 5000
 		CMD ["flask", "run"]
-
+		'''
 	- Format for "docker-compose.yml" containing 2 images (follow the indentation):
 
 		version: "3.0"

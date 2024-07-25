@@ -1,7 +1,7 @@
 ## Steps for AWS CICD Pipeline Project 
 
 
-								On VS-Code/IDE and GitHub
+						### On VS-Code/IDE and GitHub
 
 Open Anaconda CMD Prompt
 

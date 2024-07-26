@@ -18,6 +18,8 @@
 - Create "README.md" file
     Add README file to git repo "git add README.md"
 
+- Add files to GitHub repo "git add ."
+
 - Commit changes "git commit -m "first commit"
 
 - Use "git status" to check the list the files from the repo
